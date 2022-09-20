@@ -14,12 +14,12 @@
         <v-card-title>{{ item.data.source.name }}</v-card-title>
       </v-img>
 
-      <v-card-subtitle class="pb-0"> Number 10 </v-card-subtitle>
+      <v-card-subtitle class="pb-0"
+        >{{ item.data.publishedAt }}
+      </v-card-subtitle>
 
       <v-card-text class="text--primary">
-        <div>Whitehaven Beach</div>
-
-        <div>Whitsunday Island, Whitsunday Islands</div>
+        <div>{{ item.data.title }}</div>
       </v-card-text>
 
       <v-card-actions>
@@ -49,8 +49,8 @@ export default {
 
 <style scoped lang="scss">
 .conteiner {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 .mx-auto {
   margin: 10px;
